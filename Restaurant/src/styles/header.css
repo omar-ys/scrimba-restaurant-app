@@ -1,0 +1,20 @@
+.header {
+    background: url('../assets/header-bg.png') no-repeat center center;
+    background-size: cover;
+
+    color: var(--color-text-inverted);
+}
+
+.header__content {
+    padding: 2.875rem;
+}
+
+.header__title {
+    font-size: var(--font-size-xxl);
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.header__subtitle {
+    font-size: var(--font-size-lg);
+}

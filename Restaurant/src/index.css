@@ -1,1 +1,44 @@
+:root {
+  --color-bg: #FFFFFF;
+  --color-text: #000000;
+  --color-text-inverted: #FFFFFF;
+  --color-text-secondary: #8B8B8B;
+  --color-primary: #16DB99;
+  --color-border: #757575;
+  --color-divider: #D2D2D2;
 
+  --success-bg: #ECFDF5;
+  --success-text: #065F46;
+  
+  --font-family: "Smythe", system-ui;
+  --font-family-form: verdana, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 1.75rem;
+  --font-size-xxl: 2.5rem;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input, button {
+  font-family: inherit;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
