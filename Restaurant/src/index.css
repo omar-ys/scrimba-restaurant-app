@@ -5,6 +5,7 @@
   --color-text-secondary: #8B8B8B;
   --color-primary: #16DB99;
   --color-border: #757575;
+  --color-border-secondary: #DEDEDE;
   --color-divider: #D2D2D2;
 
   --success-bg: #ECFDF5;
@@ -12,6 +13,7 @@
   
   --font-family: "Smythe", system-ui;
   --font-family-form: verdana, sans-serif;
+  --font-family-thin: "Inter", system-ui;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 1rem;
@@ -34,7 +36,7 @@ img {
 }
 
 input, button {
-  font-family: inherit;
+  font-family: var(--font-family-form);
 }
 
 body {
