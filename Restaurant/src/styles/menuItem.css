@@ -5,6 +5,12 @@
     padding: 2rem 0;
 }
 
+@media (max-width: 400px) {
+    .menu-item{
+        gap: 0.5rem;
+    } 
+}
+
 .menu-item__details{
     flex: 1;
 }
