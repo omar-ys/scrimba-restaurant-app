@@ -1,0 +1,60 @@
+.order__heading {
+    margin: 2rem;
+    text-align: center;
+    font-size: var(--font-size-xl);
+    font-weight: normal;
+}
+
+
+
+.order__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order__title {
+    font-size: var(--font-size-xl);
+}
+
+.order__remove-btn {
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary)
+}
+
+.order__price{
+    font-size: var(--font-size-md);
+}
+
+.order__divider {
+    border: 1px solid black;
+    margin: 1rem 0;
+}
+
+.order__total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order__total-label {
+    font-size: var(--font-size-xl);
+}
+
+.order__submint-btn {
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: var(--color-primary);
+    color: var(--color-text-inverted);
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.order__submint-btn:hover {
+    background-color: var(--color-primary-hover);
+}
