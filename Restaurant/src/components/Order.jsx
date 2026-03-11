@@ -1,18 +1,25 @@
 import '../styles/order.css'
 
-function Order() {
+function Order({ items }) {
+
+    const totalPrice = items.reduce((sum, item) => sum + item.price, 0)
+
     return (
         <section className="order">
             <h3 className="order__heading">Your order</h3>
 
             <ul className='order__list'>
-                <li className="order__item">
-                    <div>
-                        <span className="order__title">Pizza</span>
-                        <button className="order__remove-btn">remove</button>
-                    </div>
-                    <p className="order__price">$14</p>
-                </li>
+
+                {items.map((orderItem, index) => (
+                    <li className="order__item" key={index}>
+                        <div>
+                            <span className="order__title">{orderItem.name}</span>
+                            <button className="order__remove-btn">remove</button>
+                        </div>
+                        <p className="order__price">${orderItem.price}</p>
+                    </li>
+                ))}
+
             </ul>
 
 
@@ -20,11 +27,11 @@ function Order() {
 
             <div className="order__total">
                 <span className="order__total-label">Total price:</span>
-                <span className="order__price">$26</span>
+                <span className="order__price">${totalPrice}</span>
             </div>
 
             <button className="order__submint-btn">Complete order</button>
-            
+
 
         </section>
     )

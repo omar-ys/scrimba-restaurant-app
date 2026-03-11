@@ -1,6 +1,8 @@
 import '../styles/menuItem.css'
 
-function MenuItem({ name, ingredients, price, emoji }) {
+function MenuItem({ item, addToOrder }) {
+    const { name, ingredients, price, emoji } = item;
+
     return (
         <div className="menu-item">
             <span className="menu-item__emoji" aria-hidden="true">
@@ -15,7 +17,10 @@ function MenuItem({ name, ingredients, price, emoji }) {
                 <p className="menu-item__price">${price}</p>
             </div>
 
-            <button className="menu-item__button" aria-label={`Add ${name} to order`}>
+            <button 
+                className="menu-item__button"
+                onClick={() => addToOrder(item)}
+                aria-label={`Add ${name} to order`}>
                 +
             </button>
 
