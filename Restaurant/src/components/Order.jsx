@@ -1,6 +1,6 @@
 import '../styles/order.css'
 
-function Order({ items }) {
+function Order({ items, removeFromOrder }) {
 
     const totalPrice = items.reduce((sum, item) => sum + item.price, 0)
 
@@ -14,7 +14,7 @@ function Order({ items }) {
                     <li className="order__item" key={index}>
                         <div>
                             <span className="order__title">{orderItem.name}</span>
-                            <button className="order__remove-btn">remove</button>
+                            <button className="order__remove-btn" onClick={() => removeFromOrder(index)}>remove</button>
                         </div>
                         <p className="order__price">${orderItem.price}</p>
                     </li>

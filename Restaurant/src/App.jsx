@@ -11,13 +11,18 @@ function App() {
     setOrderItems(prevOrder => [...prevOrder, newItem])
   }
 
+  function removeFromOrder(indexToRemove) {
+    console.log(indexToRemove)
+    setOrderItems(prevOrder => prevOrder.filter((item, index) => index != indexToRemove))
+  }
+
   return (
     <div className="App">
       <Header />
       <main className="wrapper">
         <Menu addToOrder={addToOrder} />
         {orderItems.length > 0 && (
-          <Order items={orderItems} />
+          <Order items={orderItems} removeFromOrder={removeFromOrder} />
         )}
       </main>
     </div>
