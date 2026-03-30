@@ -1,8 +1,13 @@
 import '../styles/checkout.css'
 
-function Checkout(){
+function Checkout({closeCheckout}){
+
+    function handleOverlayClick(e) {
+        e.target === e.currentTarget && closeCheckout()
+    }
+
     return(
-        <div className="checkout-overlay"> 
+        <div className="checkout-overlay" onClick={handleOverlayClick}> 
             <div className="checkout">
                 <h3 className="checkout__title">Enter card details</h3>
                 <form className="checkout__form">

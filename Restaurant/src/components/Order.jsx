@@ -1,6 +1,6 @@
 import '../styles/order.css'
 
-function Order({ items, removeFromOrder }) {
+function Order({ items, removeFromOrder, openCheckout }) {
 
     const totalPrice = items.reduce((sum, item) => sum + item.price, 0)
 
@@ -30,7 +30,7 @@ function Order({ items, removeFromOrder }) {
                 <span className="order__price">${totalPrice}</span>
             </div>
 
-            <button className="order__submint-btn">Complete order</button>
+            <button className="order__submint-btn" onClick={openCheckout}>Complete order</button>
 
 
         </section>
