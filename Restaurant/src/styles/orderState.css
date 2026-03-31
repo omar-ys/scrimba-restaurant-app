@@ -1,0 +1,12 @@
+.order-state{
+    width: 100%;
+    margin: 45px 0;
+    padding: 50px 0;
+    background-color: var(--success-bg);
+}
+
+.order-state__content{
+    color: var(--success-text);
+    font-size: var(--font-size-xl);
+    text-align: center;
+}
